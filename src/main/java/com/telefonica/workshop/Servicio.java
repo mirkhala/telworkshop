@@ -12,12 +12,12 @@ public class Servicio implements java.io.Serializable {
 	private java.lang.Boolean esOnline;
 	@org.kie.api.definition.type.Label("esVigente")
 	private java.lang.Boolean esVigente;
-	@org.kie.api.definition.type.Label("ds")
-	private java.lang.String ds;
-	@org.kie.api.definition.type.Label("ms")
-	private java.lang.String ms;
 	@org.kie.api.definition.type.Label("equipo")
 	private java.lang.String equipo;
+	@org.kie.api.definition.type.Label("ms")
+	private java.lang.String ms;
+	@org.kie.api.definition.type.Label("ds")
+	private java.lang.String ds;
 	@org.kie.api.definition.type.Label("ciudad")
 	private java.lang.String ciudad;
 	@org.kie.api.definition.type.Label("direccion")
@@ -31,7 +31,7 @@ public class Servicio implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("banwidth")
 	private java.lang.Double banwidth;
 	@org.kie.api.definition.type.Label("valorProyecto")
-	private java.lang.Double valorProyecto;
+	private Double valorProyecto;
 	@org.kie.api.definition.type.Label("recursosDisponibles")
 	private java.lang.Boolean recursosDisponibles;
 	@org.kie.api.definition.type.Label("disponibildadEquipos")
@@ -70,12 +70,12 @@ public class Servicio implements java.io.Serializable {
 		this.esVigente = esVigente;
 	}
 
-	public java.lang.String getDs() {
-		return this.ds;
+	public java.lang.String getEquipo() {
+		return this.equipo;
 	}
 
-	public void setDs(java.lang.String ds) {
-		this.ds = ds;
+	public void setEquipo(java.lang.String equipo) {
+		this.equipo = equipo;
 	}
 
 	public java.lang.String getMs() {
@@ -86,12 +86,12 @@ public class Servicio implements java.io.Serializable {
 		this.ms = ms;
 	}
 
-	public java.lang.String getEquipo() {
-		return this.equipo;
+	public java.lang.String getDs() {
+		return this.ds;
 	}
 
-	public void setEquipo(java.lang.String equipo) {
-		this.equipo = equipo;
+	public void setDs(java.lang.String ds) {
+		this.ds = ds;
 	}
 
 	public java.lang.String getCiudad() {
@@ -140,14 +140,6 @@ public class Servicio implements java.io.Serializable {
 
 	public void setBanwidth(java.lang.Double banwidth) {
 		this.banwidth = banwidth;
-	}
-
-	public java.lang.Double getValorProyecto() {
-		return this.valorProyecto;
-	}
-
-	public void setValorProyecto(java.lang.Double valorProyecto) {
-		this.valorProyecto = valorProyecto;
 	}
 
 	public java.lang.Boolean getRecursosDisponibles() {
@@ -230,8 +222,16 @@ public class Servicio implements java.io.Serializable {
 				+ this.direccion + this.esUnAlta + this.banwidth;
 	}
 
+	public java.lang.Double getValorProyecto() {
+		return this.valorProyecto;
+	}
+
+	public void setValorProyecto(java.lang.Double valorProyecto) {
+		this.valorProyecto = valorProyecto;
+	}
+
 	public Servicio(java.lang.Boolean esOnline, java.lang.Boolean esVigente,
-			java.lang.String ds, java.lang.String ms, java.lang.String equipo,
+			java.lang.String equipo, java.lang.String ms, java.lang.String ds,
 			java.lang.String ciudad, java.lang.String direccion,
 			java.lang.String tipoProducto, java.lang.String tipoServicio,
 			java.lang.Boolean esUnAlta, java.lang.Double banwidth,
@@ -245,9 +245,9 @@ public class Servicio implements java.io.Serializable {
 			java.lang.Boolean instalarEquiposMovistar) {
 		this.esOnline = esOnline;
 		this.esVigente = esVigente;
-		this.ds = ds;
-		this.ms = ms;
 		this.equipo = equipo;
+		this.ms = ms;
+		this.ds = ds;
 		this.ciudad = ciudad;
 		this.direccion = direccion;
 		this.tipoProducto = tipoProducto;
